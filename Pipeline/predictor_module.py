@@ -14,7 +14,7 @@ def register_sam(img = None):
         return None
 
     if isinstance(img, np.ndarray):
-        sam = sam_model_registry["vit_h"](checkpoint = r"/Users/jantheiss/Labeling/sam_vit_h_4b8939.pth")
+        sam = sam_model_registry["vit_h"](checkpoint = <INSERT PATH TO MODEL CHECKPOINT HERE>)
         predictor = SamPredictor(sam)
         predictor.set_image(img)
         return predictor
