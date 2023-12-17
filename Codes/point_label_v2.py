@@ -41,7 +41,7 @@ def register_sam():
     global predictor
     #/Users/jantheiss/Labeling/sam_vit_b_01ec64.pth
     #/Users/jantheiss/Labeling/sam_vit_h_4b8939.pth
-    sam = sam_model_registry["vit_h"](checkpoint = r"/Users/jantheiss/Labeling/sam_vit_h_4b8939.pth")
+    sam = sam_model_registry["vit_h"](checkpoint = <ENTER PATH TO MODEL CHECKPOINTS>)
     predictor = SamPredictor(sam)
     predictor.set_image(img)
 
