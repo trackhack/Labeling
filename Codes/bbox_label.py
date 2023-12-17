@@ -32,7 +32,7 @@ def mouse_callback(event, x, y, flags, param):
             cv2.imshow("Rectangle Drawing", img_copy)
 
 # Create a black image window
-img = cv2.imread(r"/Users/jantheiss/Labeling/img.jpg")
+img = cv2.imread(<PATH TO YOUR IMAGE>)
 
 # Display the initial black image
 cv2.imshow("Rectangle Drawing", img)
@@ -53,7 +53,7 @@ cv2.destroyAllWindows()
 
 ###################################### SAM-PREDICTOR USING BBOX PROMT ######################################
 
-sam = sam_model_registry["vit_h"](checkpoint = r"/Users/jantheiss/Labeling/sam_vit_h_4b8939.pth")
+sam = sam_model_registry["vit_h"](checkpoint = <ENTER PATH TO MODEL CHECKPOINTS>)
 predictor = SamPredictor(sam)
 predictor.set_image(img)
 input_label = np.array([1])
@@ -81,7 +81,7 @@ for i, mask in enumerate(masks):
 #    cv2.waitKey(0)
 #    cv2.destroyAllWindows()
     
-#sam = sam_model_registry["vit_h"](checkpoint = r"/Users/jantheiss/Labeling/sam_vit_h_4b8939.pth")
+#sam = sam_model_registry["vit_h"](checkpoint = <ENTER PATH TO MODEL CHECKPOINTS>)
 #mask_generator = SamAutomaticMaskGenerator(sam)
 #masks = mask_generator.generate(roi)
 
