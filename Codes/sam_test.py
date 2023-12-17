@@ -3,13 +3,13 @@ import numpy as np
 from segment_anything import SamAutomaticMaskGenerator, sam_model_registry
 
 ###read image###
-img = cv2.imread(r"/Users/jantheiss/Downloads/0001Schloss_-Fruehling_3-_69146_-Web-1000px_.jpg")
+img = cv2.imread(<PATH TO AN IMAGE OF YOUR CHOICE>)
 cv2.imshow("SCHLOSS", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 ###register sam###
-sam = sam_model_registry["vit_h"](checkpoint = r"/Users/jantheiss/Labeling/sam_vit_h_4b8939.pth")
+sam = sam_model_registry["vit_h"](checkpoint = <ENTER PATH TO MODEL CHECKPOINTS>)
 mask_generator = SamAutomaticMaskGenerator(sam)
 masks = mask_generator.generate(img)
 
