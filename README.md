@@ -8,4 +8,4 @@ Please follow the necessary installation steps provided on the [Segment Anything
 Before running my Code, make sure to change Paths accordingly. When working with the provided Code in Pipeline Section, be aware that it is meant to work in a certain directory structure and following the rules of the labeling pipeline. You may need to change this according to your needs. 
 
 ##Additional Information
-
+The Presentation.pdf is a short presentation I held for a course of mine 
